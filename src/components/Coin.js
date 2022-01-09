@@ -7,7 +7,7 @@ const Coin = ({ rank, name, image, symbol, price, volume,
         <div className="coin-container">
             <div className="coin-row">
                 <div className="coin">
-                    <p className="coin-rank">#{rank}</p>
+                    <p className="coin-rank">#{rank}</p> 
                     <img src={image} alt="coinimage"/>
                     <h1>{name}</h1>
                     <p className="coin-symbol">{symbol.toUpperCase()}</p>

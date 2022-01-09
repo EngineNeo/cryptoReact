@@ -10,8 +10,8 @@ import Coin from './components/Coin';
 // https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false
 
 function App() {
-  const [coins, setCoins] = useState([]);
-  const [search, setSearch] = useState('');
+  const [coins, setCoins] = useState([]); // Setting the coins from API
+  const [search, setSearch] = useState(''); // Getting the user input
 
   useEffect(() => {
     axios.get('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false')
@@ -20,14 +20,18 @@ function App() {
     }).catch(error => console.log('An error has occured'));
   }, []);
 
+  // As the user adds input adds to react function
   const handleChange = e => {
     setSearch(e.target.value)
   }
 
+  // Filters through coins as user types
   const filteredCoins = coins.filter(coin => 
     coin.name.toLowerCase().includes(search.toLowerCase())
     )
 
+
+  // Return from API to display
   return (
     <div className="coin-app">
       <div className="coin-search">

@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/cryptoReact/static/css/main.2df76ff4.css",
+    "main.js": "/cryptoReact/static/js/main.0203f24d.js",
+    "index.html": "/cryptoReact/index.html",
+    "main.2df76ff4.css.map": "/cryptoReact/static/css/main.2df76ff4.css.map",
+    "main.0203f24d.js.map": "/cryptoReact/static/js/main.0203f24d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2df76ff4.css",
+    "static/js/main.0203f24d.js"
+  ]
+}

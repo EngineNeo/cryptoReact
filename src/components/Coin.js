@@ -1,12 +1,13 @@
 import './Coin.css';
 
-const Coin = ({ name, image, symbol, price, volume,
+const Coin = ({ rank, name, image, symbol, price, volume,
                 priceChange, marketcap }) => {
 
     return ( 
         <div className="coin-container">
             <div className="coin-row">
                 <div className="coin">
+                    <p className="coin-rank">#{rank}</p>
                     <img src={image} alt="coinimage"/>
                     <h1>{name}</h1>
                     <p className="coin-symbol">{symbol.toUpperCase()}</p>
@@ -17,7 +18,7 @@ const Coin = ({ name, image, symbol, price, volume,
                     {priceChange < 0 ? (
                         <p className="coin-percent red">{priceChange.
                             toFixed(2)}%</p>
-                    ) : (<p className="coin-percent green">{priceChange.
+                    ) : (<p className="coin-percent green">+{priceChange.
                     toFixed(2)}%</p>)
                     }
                     <p className="coin-marketcap">Market Cap: {marketcap.

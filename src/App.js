@@ -3,6 +3,10 @@ import  { useState, useEffect } from 'react';
 import axios from 'axios';
 import Coin from './components/Coin';
 
+// Features to add
+
+// Sorting stablecoins
+
 // https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false
 
 function App() {
@@ -34,7 +38,8 @@ function App() {
         </form>
       </div>
       {filteredCoins.map(coin => {
-        return <Coin key={coin.id} 
+        return <Coin key={coin.id}
+                rank={coin.market_cap_rank}
                 name={coin.name} 
                 image={coin.image}
                 symbol={coin.symbol}
